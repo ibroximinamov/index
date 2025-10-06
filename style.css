@@ -1,176 +1,302 @@
-/* Reset */
+/* Asosiy Sozlamalar va Font */
+:root {
+    --primary-color: #007bff; /* Moviy (asosiy rang) */
+    --secondary-color: #f8f9fa; /* Yengil kulrang (orqa fon uchun) */
+    --dark-color: #212529; /* To'q rang (matn uchun) */
+    --light-color: #ffffff; /* Oq rang */
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Tana umumiy stili */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1e1e1e;  /* to‘q kulrang */
-  color: #f0f0f0;             /* och kulrang matn */
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color); /* Umumiy yengil fon */
+    color: var(--dark-color);
 }
 
-/* Header (nav bar) */
-.header-banner {
-  background-image: url('images/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  position: relative;
-  color: rgb(87, 86, 85);
-  display: flex;
-  align-items: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.header-banner::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1;
+/* Header va Navigatsiya */
+#header-banner {
+    background-color: var(--light-color);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav {
-  z-index: 2;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
+#header-banner nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+#header-banner h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
-nav a {
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: color 0.3s;
+#header-banner ul {
+    list-style: none;
+    display: flex;
 }
 
-nav a:hover {
-  color: #ffcc00; /* sariq effekt */
+#header-banner ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
 
-/* Hero bo‘limi */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  animation: fadeIn 1.2s ease-in;
+#header-banner ul li a:hover {
+    color: var(--primary-color);
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* Asosiy Qism (Hero Section) */
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* ORQA FON RASMINI BU YERGA QO'YING! */
+    color: var(--light-color);
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
 }
 
-.hero span {
-  color: #ffcc00;
+/* Orqa fon qoraytiruvchi (Overlay) */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Orqa fonni bir oz qoraytirish */
+    z-index: 1;
 }
 
-/* About / Projects / Contact umumiy stil */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-section h2 span {
+    color: var(--primary-color);
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Umumiy Bo'limlar (Sections) */
 section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+    padding: 60px 0;
 }
 
-/* Loyiha kartalari */
-.project {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  transition: transform 0.1s ease;
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.project:hover {
-  transform: sans-serif(1.1);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+/* Men Haqimda Bo'limi */
+.about-section {
+    background-color: var(--light-color);
 }
 
-/* Kontakt formasi */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.about-content {
+    display: flex;
+    justify-content: center;
 }
 
-input, textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  background-color: #333;
-  color: white;
+.profile-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 900px;
 }
 
-button {
-  padding: 12px;
-  background-color: #ffcc00;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #e6b800;
-}
-
-/* Rasm */
 .profile-pic {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 30px auto;
-  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Dumaloq rasm */
+    border: 5px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.focus-text {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+
+/* Loyihalar Bo'limi */
+.projects-section {
+    background-color: #e9ecef; /* Loyihalar uchun boshqa fon */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--light-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link i {
+    margin-left: 5px;
+}
+
+/* Aloqa Bo'limi */
+.contact-section {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #121212;
-  color: #888;
-  margin-top: 60px;
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Animatsiya */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-footer {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #121212;
-  color: #888;
-  margin-top: 60px;
-}
-
-.social-icons {
-  margin-top: 15px;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .social-icons a {
-  color: #888;
-  margin: 0 15px;
-  font-size: 24px;
-  transition: color 0.3s ease;
-  text-decoration: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #ffcc00; /* sariq rang hoverda */
+    color: var(--primary-color);
+}
+
+/* Mobil Moslashuv (Responsive) */
+@media (max-width: 768px) {
+    #header-banner nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    #header-banner ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    #header-banner ul li a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .profile-card {
+        flex-direction: column; /* Mobil telefonda rasmni tepaga, matnni pastga tushirish */
+        text-align: center;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
 }
