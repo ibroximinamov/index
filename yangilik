@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Example</title>
+  <link rel="stylesheet" href="yangilik.css">
+</head>
+<body>
+
+  <div class="card blue">
+    <h2>CARD ONE</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+  <div class="card yellow">
+    <h2>CARD TWO</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+  <div class="card navy">
+    <h2>CARD THREE</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+  <div class="card red">
+    <h2>CARD FOUR</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+  <div class="card purple">
+    <h2>CARD FIVE</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+  <div class="card orange">
+    <h2>CARD SIX</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur...</p>
+    <button>LEARN MORE</button>
+  </div>
+
+</body>
+</html
