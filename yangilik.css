@@ -1,0 +1,61 @@
+/* Umumiy sahifa uchun */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Kartalar dizayni */
+  .card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Ranglar */
+  .blue { background-color: #3498db; color: white; }
+  .yellow { background-color: #f1c40f; color: white; }
+  .navy { background-color: #2c3e50; color: white; }
+  .red { background-color: #e74c3c; color: white; }
+  .purple { background-color: #9b59b6; color: white; }
+  .orange { background-color: #e67e22; color: white; }
+  
+  /* Tugmalar */
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: inherit;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Responsivlik: telefonlar uchun */
+  @media (max-width: 600px) {
+    .card {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
